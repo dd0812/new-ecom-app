@@ -14,7 +14,7 @@ function Home(props) {
     const [showAlert, setShowAlert] = useState(false);
 
     useEffect(() => {
-        if (history.location.state === undefined && history.location.state.invalidUser) {
+        if (history.location.state === undefined || history.location.state.invalidUser === undefined) {
             history.push('/login');
         } else {
             dispatch({ type: 'clear', payload: [] });
