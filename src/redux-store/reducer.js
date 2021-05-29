@@ -1,12 +1,18 @@
-export const initialState = {productSelected: []};
+export const initialState = { products: [] };
 
 export function reducer(state, action) {
-  switch (action.type) {
-    case 'increment':
-        const productSelected = state.productSelected;
-        productSelected.push(action.payload);
-      return {...state, productSelected};
-    default:
-      throw new Error();
-  }
+    switch (action.type) {
+        case 'increment':
+            const products = state.products;
+            products.push(action.payload);
+            return { ...state, products };
+
+
+        case 'clear':
+            return { ...state, products: action.payload };
+
+
+        default:
+            throw new Error();
+    }
 }

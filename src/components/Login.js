@@ -9,17 +9,14 @@ function Login() {
     const history = useHistory();
 
     const handleSubmit = (e) => {
-        // console.log('params', params);
         console.log('userName and pwd', userName, password);
         e.preventDefault();
         if (userName === 'foo' && password === 'bar') {
             setInvalidUser(false);
-            // setInvalidUser(false, () => {
-                history.push({
-                    pathname: '/home',
-                    state: { invalidUser: false }
-                });
-            // });
+            history.push({
+                pathname: '/home',
+                state: { invalidUser: false }
+            });
         } else {
             setInvalidUser(true);
         }

@@ -77,6 +77,17 @@
   font-weight: bold;
 }
 
+.product-num{
+  color: white;
+}
+
+.jewel{
+  color: white;
+  right: 9px;
+  top: -13px;
+  position: relative;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
